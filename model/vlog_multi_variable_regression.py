@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 def model(key):
-    data_name = "../data/model_youtube_crawling_data_"+key+".csv"
+    data_name = "../data/model_youtube_crawling_data_"+key+"_outlier.csv"
     data = pd.read_csv(data_name)
 
 
