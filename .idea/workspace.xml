@@ -45,7 +45,29 @@
       <recent name="D:\PredictViews\crawler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.predict_view">
+  <component name="RunManager" selected="Python.accuracy">
+    <configuration name="accuracy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PredictViews" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/accuracy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="data_preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PredictViews" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,35 +178,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vlog_multi_variable_regression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PredictViews" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PredictViews\model\vlog_multi_variable_regression.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.accuracy" />
         <item itemvalue="Python.predict_view" />
         <item itemvalue="Python.outlier" />
         <item itemvalue="Python.data_preprocessing" />
         <item itemvalue="Python.keyword_crawler (1)" />
-        <item itemvalue="Python.vlog_multi_variable_regression" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +236,8 @@
       <workItem from="1590409792711" duration="2110000" />
       <workItem from="1590929502101" duration="5140000" />
       <workItem from="1591009183574" duration="611000" />
-      <workItem from="1591012614313" duration="1469000" />
+      <workItem from="1591012614313" duration="2461000" />
+      <workItem from="1591015099102" duration="829000" />
     </task>
     <servers />
   </component>
@@ -252,22 +253,22 @@
       <screen x="0" y="0" width="1217" height="720" />
     </state>
     <state x="390" y="116" key="FileChooserDialogImpl/0.0.1217.720@0.0.1217.720" timestamp="1588083382331" />
-    <state width="1176" height="239" key="GridCell.Tab.0.bottom" timestamp="1590935435996">
+    <state width="1176" height="239" key="GridCell.Tab.0.bottom" timestamp="1591016560107">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1176" height="239" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1590935435996" />
-    <state width="1176" height="239" key="GridCell.Tab.0.center" timestamp="1590935435996">
+    <state width="1176" height="239" key="GridCell.Tab.0.bottom/0.0.1217.720@0.0.1217.720" timestamp="1591016560107" />
+    <state width="1176" height="239" key="GridCell.Tab.0.center" timestamp="1591016560107">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1176" height="239" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1590935435996" />
-    <state width="1176" height="239" key="GridCell.Tab.0.left" timestamp="1590935435996">
+    <state width="1176" height="239" key="GridCell.Tab.0.center/0.0.1217.720@0.0.1217.720" timestamp="1591016560107" />
+    <state width="1176" height="239" key="GridCell.Tab.0.left" timestamp="1591016560107">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1176" height="239" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1590935435996" />
-    <state width="1176" height="239" key="GridCell.Tab.0.right" timestamp="1590935435996">
+    <state width="1176" height="239" key="GridCell.Tab.0.left/0.0.1217.720@0.0.1217.720" timestamp="1591016560107" />
+    <state width="1176" height="239" key="GridCell.Tab.0.right" timestamp="1591016560107">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state width="1176" height="239" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1590935435996" />
+    <state width="1176" height="239" key="GridCell.Tab.0.right/0.0.1217.720@0.0.1217.720" timestamp="1591016560107" />
     <state width="1176" height="220" key="GridCell.Tab.1.bottom" timestamp="1587463699468">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
@@ -284,10 +285,10 @@
       <screen x="0" y="0" width="1217" height="720" />
     </state>
     <state width="1176" height="220" key="GridCell.Tab.1.right/0.0.1217.720@0.0.1217.720" timestamp="1587463699468" />
-    <state x="148" y="4" key="SettingsEditor" timestamp="1587370898400">
+    <state x="148" y="4" key="SettingsEditor" timestamp="1591015081047">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
-    <state x="148" y="4" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1587370898400" />
+    <state x="148" y="4" key="SettingsEditor/0.0.1217.720@0.0.1217.720" timestamp="1591015081047" />
     <state x="406" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587391189494">
       <screen x="0" y="0" width="1217" height="720" />
     </state>
@@ -298,17 +299,18 @@
     <state x="272" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1217.720@0.0.1217.720" timestamp="1588589972483" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PredictViews$model2.coverage" NAME="model2 Coverage Results" MODIFIED="1588003804485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/PredictViews$multi_variable_regression__1_.coverage" NAME="multi_variable_regression (1) Coverage Results" MODIFIED="1588596633861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/PredictViews$predict_view.coverage" NAME="predict_view Coverage Results" MODIFIED="1591013468711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
     <SUITE FILE_PATH="coverage/PredictViews$test.coverage" NAME="test Coverage Results" MODIFIED="1587369706780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PredictViews$outlier.coverage" NAME="outlier Coverage Results" MODIFIED="1591013223180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/PredictViews$select.coverage" NAME="select Coverage Results" MODIFIED="1587483060887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PredictViews$crawler.coverage" NAME="crawler Coverage Results" MODIFIED="1588059821513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
     <SUITE FILE_PATH="coverage/PredictViews$keyword_crawler__1_.coverage" NAME="keyword_crawler (1) Coverage Results" MODIFIED="1590933494677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
     <SUITE FILE_PATH="coverage/PredictViews$model1.coverage" NAME="model1 Coverage Results" MODIFIED="1588041037299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/PredictViews$necessity_oneday_data.coverage" NAME="necessity_oneday_data Coverage Results" MODIFIED="1587895482435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PredictViews$data_preprocessing.coverage" NAME="data_preprocessing Coverage Results" MODIFIED="1591013185820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/PredictViews$model2.coverage" NAME="model2 Coverage Results" MODIFIED="1588003804485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/PredictViews$predict_view.coverage" NAME="predict_view Coverage Results" MODIFIED="1591013468711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
+    <SUITE FILE_PATH="coverage/PredictViews$select.coverage" NAME="select Coverage Results" MODIFIED="1587483060887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PredictViews$necessity_oneday_data.coverage" NAME="necessity_oneday_data Coverage Results" MODIFIED="1587895482435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PredictViews$accuracy.coverage" NAME="accuracy Coverage Results" MODIFIED="1591016560096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/PredictViews$keyword_crawler.coverage" NAME="keyword_crawler Coverage Results" MODIFIED="1587895590165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -5,7 +5,7 @@ import sklearn
 def acurracy(key):
 
     # 데이터 선택
-    data_name = "model_youtube_crawling_data_"+key+"_outlier.csv"
+    data_name = "../data/model_youtube_crawling_data_"+key+"_outlier.csv"
     data = pd.read_csv(data_name)
 
     # csv파일 0번째 줄이 View, Comment 등 이라서 스킵하고 불러옴
@@ -44,4 +44,4 @@ def acurracy(key):
 
 
 # key = input()
-# acurracy(key)
+acurracy('vlog')
