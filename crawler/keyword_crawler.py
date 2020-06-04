@@ -16,8 +16,9 @@ browser.implicitly_wait(delay)
 start_url = 'https://www.youtube.com/results?search_query='
 
 # 3. 작성될 파일 열기
-# data = pd.read_csv('today_youtube_crawling_data_vlog.csv', sep=',')
-data = pd.DataFrame(columns=["Now", "Title", "View", "Coment", "Like", "Subscriber"])
+#data = pd.read_csv('today_youtube_crawling_data_vlog.csv', sep=',')
+#data = pd.DataFrame(columns=["Now", "Title", "View", "Coment", "Like", "Subscriber"])
+data = pd.read_csv('today_youtube_crawling_data_review.csv', sep=',') #리뷰
 
 all_data = []
 
@@ -31,7 +32,7 @@ def crawling(keyword):
     body = browser.find_element_by_tag_name('body')  # 스크롤하기 위해 소스 추출
 
     #매끄러운 크롤링을 위한 사전 작업
-    for vindex in range(50) :
+    for vindex in range(35) :
         body.send_keys((Keys.END))
         time.sleep(1)
     body.send_keys(Keys.HOME) #홈 키로 최상단
@@ -44,11 +45,17 @@ def crawling(keyword):
         # vindex 번호의 영상 클릭
         print(vindex)
 
+        # 20개마다 특정 index가 갱신됨
+        i=1
+        if vindex % 20 == 0 :
+            i+=1
+
         try :
-            video_btn = browser.find_elements_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer['+str(vindex)+']/div[1]/div/div[1]/div/h3/a')
-            browser.implicitly_wait(5)
-            video_btn[0].click()
+            video_btn = browser.find_elements_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer['+str(i)+']/div[3]/ytd-video-renderer['+str(vindex%20)+']/div[1]/div/div[1]/div/h3/a')
+            browser.implicitly_wait(5)                #/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer[1]/div[3]/ytd-video-renderer[20]/div[1]/div/div[1]/div/h3/a
+            video_btn[0].click()                      #/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer[2]/div[3]/ytd-video-renderer[2]/div[1]/div/div[1]/div/h3/a
             time.sleep(5) # 제목이 뜨기전에 정보를 받아오려고 하는 경우가 있어 잠재워줌
+
 
         except :
             print("loading...")
@@ -56,7 +63,7 @@ def crawling(keyword):
 
         # 댓글수 확인을 위한 스크롤
         body.send_keys(Keys.PAGE_DOWN)
-        time.sleep(2)
+        time.sleep(3)
 
 
         # 페이지 소스 받아오기
@@ -119,8 +126,8 @@ def crawling(keyword):
 
 
 # 크롤링 원하는 검색어
-# key='브이로그'
-key = '리뷰'
+key='리뷰'
+#key = '브이로그'
 
 # 5. 일괄 크롤링
 try :
@@ -135,7 +142,7 @@ print(key + " crawling finished")
 # csv 파일에 저장
 data.to_csv('today_youtube_crawling_data_temp.csv',mode='w',encoding='utf-8-sig')
 # data.to_csv('today_youtube_crawling_data_vlog.csv', mode='a',encoding='utf-8-sig')
-data.to_csv('today_youtube_crawling_data_review.csv',mode='w',encoding='utf-8-sig')
+data.to_csv('today_youtube_crawling_data_review.csv',mode='a',encoding='utf-8-sig') #리뷰
 # 6. 브라우저 닫기
 browser.close()
 
