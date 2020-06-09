@@ -12,13 +12,23 @@ delay = 3
 browser = Chrome('D:\Downloads\chromedriver_win32 (2)\chromedriver.exe') #자신의 경로로 바꿔줘야함
 browser.implicitly_wait(delay)
 
+
 # 2. 유투브 url로 접속 query에 검색하고 싶은 키워드 입력(밑에 리스트에서 입력)
 start_url = 'https://www.youtube.com/results?search_query='
 
 # 3. 작성될 파일 열기
-#data = pd.read_csv('today_youtube_crawling_data_vlog.csv', sep=',')
-#data = pd.DataFrame(columns=["Now", "Title", "View", "Coment", "Like", "Subscriber"])
-data = pd.read_csv('today_youtube_crawling_data_review.csv', sep=',') #리뷰
+# 처음 파일 생성 시
+# data = pd.DataFrame(columns=["Now", "Title", "View", "Coment", "Like", "Subscriber"])
+
+
+# 크롤링 원하는 검색어
+key='리뷰'
+key_='review'
+
+# key = '브이로그'
+# key_ = 'vlog'
+
+data = pd.read_csv('today_youtube_crawling_data_'+key_+'.csv', sep=',')
 
 all_data = []
 
@@ -125,9 +135,7 @@ def crawling(keyword):
 
 
 
-# 크롤링 원하는 검색어
-key='리뷰'
-#key = '브이로그'
+
 
 # 5. 일괄 크롤링
 try :
@@ -141,8 +149,8 @@ print(key + " crawling finished")
 
 # csv 파일에 저장
 data.to_csv('today_youtube_crawling_data_temp.csv',mode='w',encoding='utf-8-sig')
-# data.to_csv('today_youtube_crawling_data_vlog.csv', mode='a',encoding='utf-8-sig')
-data.to_csv('today_youtube_crawling_data_review.csv',mode='a',encoding='utf-8-sig') #리뷰
+data.to_csv('today_youtube_crawling_data_'+key_+'.csv', mode='a',encoding='utf-8-sig')
+# data.to_csv('today_youtube_crawling_data_review.csv',mode='a',encoding='utf-8-sig') #리뷰
 # 6. 브라우저 닫기
 browser.close()
 
