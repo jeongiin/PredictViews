@@ -1,0 +1,43 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+def model(key):
+    data_name = "../data/model_youtube_crawling_data_"+key+"_outlier.csv"
+    data = pd.read_csv(data_name)
+
+
+    data.View = pd.to_numeric(data.View)
+    data.Coment = pd.to_numeric(data.Coment)
+    data.Like = pd.to_numeric(data.Like)
+    data.Subscriber = pd.to_numeric(data.Subscriber)
+
+    # 1. 조회수 데이터 읽기
+    X = np.c_[data['Coment'], data['Like'],data['Subscriber']]
+    y = data['View']
+    m = len(data) # 정보 개수(행 개수)
+
+    from sklearn.model_selection import train_test_split
+    x_train, x_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_size=0.2)
+
+    from sklearn.linear_model import LinearRegression
+    mlr = LinearRegression()
+    mlr.fit(x_train, y_train)
+
+    my_predict = mlr.predict([[50,26,200]])
+    print("내 조회수는 "+str(my_predict[0])+"회")
+
+    y_predict = mlr.predict(x_test)
+    print("test 조회수 : ", y_predict)
+
+
+
+    ### 정확도
+    print(mlr.score(x_train, y_train))
+
+
+
+model('')
+#y_pred = predict(50,16,100)
+#print("약 "+str(round(y_pred,2))+"회")
+

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import sklearn
 
-def acurracy(key):
+def model(key,subc,coment,like):
 
     # 데이터 선택
     data_name = "../data/model_youtube_crawling_data_"+key+"_outlier.csv"
@@ -27,6 +27,7 @@ def acurracy(key):
     from sklearn.model_selection import train_test_split
     x_train, x_test, y_train, y_test = train_test_split(x, y, train_size= 0.8, test_size= 0.2)
 
+
     from sklearn.linear_model import LinearRegression
     # train 데이터 훈련
     mlr = LinearRegression()
@@ -37,11 +38,17 @@ def acurracy(key):
     my_predict = mlr.predict((my_youtube))
     print(my_predict)'''
 
-    print(key + " train 데이터의 r2 스코어: ")
-    print(mlr.score(x_train, y_train))
-    print(key + " test 데이터의 r2 스코어: ")
-    print(mlr.score(x_test, y_test))
+    my_predict = mlr.predict([[coment,like,subc]])
+
+    # print(key + " train 데이터의 r2 스코어: ")
+    # print(mlr.score(x_train, y_train))
+    # print(key + " test 데이터의 r2 스코어: ")
+    # print(mlr.score(x_test, y_test))
+
+    return my_predict[0][0], mlr.score(x_test, y_test)
+
+
 
 
 # key = input()
-acurracy('vlog')
+#acurracy('food') # food, vlog, review, game

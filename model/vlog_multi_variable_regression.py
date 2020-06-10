@@ -68,6 +68,9 @@ def model(key):
 
     #print ("theta:")
     #print (theta)
+
+    print(mlr.score(x_test, y_test))
+
     return theta, mu, std
 
 

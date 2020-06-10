@@ -1,5 +1,6 @@
 
 from model import vlog_multi_variable_regression
+from model import result_model
 
 accuracy = -1
 subc = -1
@@ -19,28 +20,30 @@ def init():
         subc = input("구독자수 :")
         coment =input("평균 댓글수 :")
         like = input("평균 좋아요 수 :")
+
     return key,subc,coment,like
 
 
 def mypredict(key, subc, coment, like):
     pview = -1
     if int(key)==1:
-        pview = vlog_multi_variable_regression.predict(int(coment), int(like), int(subc),"vlog")
+        # pview = vlog_multi_variable_regression.predict(int(coment), int(like), int(subc),"vlog")
+        pview, accuracy = result_model.model("vlog", int(subc),int(coment),int(like))
 
     elif int(key)==2:
-        pview = 1#먹방
+        pview, accuracy = result_model.model("food", int(subc),int(coment),int(like))
 
     elif int(key)==3:
-        pview = 1#게임
+        pview, accuracy = result_model.model("game", int(subc),int(coment),int(like))
 
     elif int(key)==4:
-        pview = 1#공부
+        pview, accuracy = result_model.model("review", int(subc),int(coment),int(like))
 
     else:
         print("")
 
     #accuracy 추가 필요
-    print("당신의 예측 조회수는 "+str(round(pview,2))+"회 입니다.")
+    print("당신의 예측 조회수는 "+str(round(accuracy*100,2))+"% 확률로 "+str(round(pview,1))+"회 입니다.")
 
 
 
