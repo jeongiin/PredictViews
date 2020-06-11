@@ -43,7 +43,7 @@ def mypredict(key, subc, coment, like):
         print("")
 
     #accuracy 추가 필요
-    print("당신의 예측 조회수는 "+str(round(accuracy*100,2))+"% 확률로 "+str(round(pview,1))+"회 입니다.")
+    print("당신의 예측 조회수는 "+str(round(accuracy*100,2))+"% 정확도로 "+str(round(pview,1))+"회 입니다.")
 
 
 
