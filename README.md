@@ -1,9 +1,9 @@
 
 # 유투브 조회수 예측하기 프로젝트
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f7787d3f-6c76-4da3-9cfb-3a4f7142b99c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f7787d3f-6c76-4da3-9cfb-3a4f7142b99c/Untitled.png)
 
-🗂파일 소개
+
+🗂 파일 소개
 
 ---
 
